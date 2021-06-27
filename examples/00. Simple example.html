@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../external/bs/css/bootstrap.min.css" />
+
+	<title>jqueryBootstrapWizard Example</title>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 style="margin-bottom: 40px;">jqueryBootstrapWizard Example</h1>
+
+		<div id="navWizard">
+			<ul id="navWizardSteps" class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Step One</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Step Two</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Step Three</a>
+				</li>
+			  </ul>
+			  <div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					Step One Content
+				</div>
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					Step Two Content
+				</div>
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+					Step Three Content
+				</div>
+			  </div>
+		</div>
+	</div>
+	<script src="../external/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../external/bs/js/bootstrap.bundle.js"></script>
+
+	<script src="../src/jquery.bootstrap.wizard.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('#navWizard').jqueryBootstrapWizard({
+				onFinish: function() {
+					alert('Finish!');
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
