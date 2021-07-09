@@ -150,11 +150,9 @@
 
     // Default options
     $.fn.jqueryBootstrapWizard.defaultOptions = {
-        showHeader: 'texto-azul',
         cancel_url: null,
 		onBeforeShowTab: null,
         onShownTab: null,
-        onHideTab: null,
         onFinish: null
     }
 
